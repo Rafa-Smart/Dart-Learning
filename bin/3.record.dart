@@ -65,5 +65,32 @@ void main() {
 
   print(point2 == color2); // Prints 'false'. Lint: Equals on unrelated types
 
-  
+  // ini aga rumit dikit nih
+  String? presentKey = 'Apple';
+  String? absentKey = null;
+
+  int? presentValue = 3;
+  int? absentValue = null;
+
+  var itemsA = {presentKey: absentValue}; // {Apple: null}
+  var itemsB = {presentKey: ?absentValue}; // {}
+
+  var itemsC = {absentKey: presentValue}; // {null: 3}
+  var itemsD = {?absentKey: presentValue}; // {}
+
+  var itemsE = {absentKey: absentValue}; // {null: null}
+  var itemsF = {?absentKey: ?absentValue}; // {}
+
+  // jadi lao pake nullable, dan jika salah satu nilai, mau itu key, atau value
+  // itu bernilai null, maka nilai hasilnya akan {}
+
+  // tapi jika tidak nullable, dan salah satunya ternyaa ada yang null
+  // maka null tersebut akan jadi key / valuenya
+
+  print(itemsF);
+  print(itemsB);
+  print(itemsA);
+  print(itemsE);
+  print(itemsD);
+  print(itemsC);
 }
