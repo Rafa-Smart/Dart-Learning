@@ -1,0 +1,31 @@
+Konsep penting
+
+nanti tanya masing masng konsep disini  ke ai
+
+#
+Saat Anda terus mempelajari bahasa Dart, ingatlah fakta dan konsep berikut:
+
+Segala sesuatu yang dapat Anda tempatkan dalam variabel adalah objek , dan setiap objek adalah instans dari suatu kelas . Bahkan angka, fungsi, dan nulladalah objek. Kecuali null(jika Anda mengaktifkan keamanan null yang baik ), semua objek mewarisi dari Objectkelas tersebut.
+
+Catatan versi
+Keamanan nol diperkenalkan di Dart 2.12. Penggunaan keamanan nol memerlukan versi bahasa minimal 2.12.
+
+Meskipun Dart diketik dengan kuat, anotasi tipe bersifat opsional karena Dart dapat menyimpulkan tipe. Dalam var number = 101, numberdisimpulkan bertipe int.
+
+Jika Anda mengaktifkan keamanan null , variabel tidak dapat berisi nullkecuali Anda menyatakannya boleh. Anda dapat membuat variabel menjadi null dengan menambahkan tanda tanya ( ?) di akhir tipenya. Misalnya, variabel bertipe int?integer, atau null. Jika Anda tahu bahwa suatu ekspresi tidak pernah dievaluasi menjadi null, nulltetapi Dart tidak setuju, Anda dapat menambahkan !untuk menegaskan bahwa ekspresi tersebut bukan null (dan untuk memunculkan pengecualian jika null). Contoh:int x = nullableButNotNullInt!
+
+Bila Anda ingin secara eksplisit menyatakan bahwa tipe apa pun diizinkan, gunakan tipe Object?(jika Anda telah mengaktifkan keamanan nol), Object, atau—jika Anda harus menunda pemeriksaan tipe hingga waktu proses— tipe khususdynamic .
+
+Dart mendukung tipe generik, seperti List<int>(daftar bilangan bulat) atau List<Object>(daftar objek tipe apa pun).
+
+Dart mendukung fungsi tingkat atas (seperti main()), serta fungsi yang terikat pada kelas atau objek ( metode statis dan instan ). Anda juga dapat membuat fungsi di dalam fungsi ( fungsi bersarang atau lokal ).
+
+Demikian pula, Dart mendukung variabel tingkat atas , serta variabel yang terikat pada suatu kelas atau objek (variabel statis dan instan). Variabel instan terkadang dikenal sebagai bidang atau properti .
+
+Berbeda dengan Java, Dart tidak memiliki kata kunci public, protected, dan private. Jika sebuah pengidentifikasi diawali dengan garis bawah ( _), pengidentifikasi tersebut bersifat privat untuk pustakanya. Untuk detailnya, lihat Pustaka dan impor .
+
+Pengenal dapat dimulai dengan huruf atau garis bawah ( _), diikuti oleh kombinasi karakter apa pun ditambah angka.
+
+Dart memiliki ekspresi (yang memiliki nilai runtime) dan pernyataan (yang tidak). Misalnya, ekspresi kondisional condition ? expr1 : expr2 memiliki nilai expr1atau expr2. Bandingkan dengan pernyataan if-else , yang tidak memiliki nilai. Sebuah pernyataan sering kali berisi satu atau lebih ekspresi, tetapi sebuah ekspresi tidak dapat secara langsung berisi sebuah pernyataan.
+
+Alat Dart dapat melaporkan dua jenis masalah: peringatan dan kesalahan . Peringatan hanyalah indikasi bahwa kode Anda mungkin tidak berfungsi, tetapi tidak mencegah program Anda dieksekusi. Kesalahan dapat terjadi pada waktu kompilasi atau waktu proses. Kesalahan waktu kompilasi mencegah kode dieksekusi sama sekali; kesalahan waktu proses mengakibatkan munculnya pengecualian saat kode dieksekusi.

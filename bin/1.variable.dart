@@ -1,3 +1,35 @@
+
+// https://dart.dev/language/variables
+// Kata kunci ini const tidak hanya untuk mendeklarasikan variabel konstan. Anda juga dapat menggunakannya untuk membuat nilai konstan , serta untuk mendeklarasikan konstruktor yang menghasilkan nilai konstan. Variabel apa pun dapat memiliki nilai konstan.
+
+var foo = const [];
+final bar = const [];
+const baz = []; // Equivalent to `const []`
+
+
+// ini keren nih
+// https://dart.dev/language/operators
+// Kaskade ( .., ?..) memungkinkan Anda membuat serangkaian operasi pada objek yang sama. Selain mengakses anggota instans, Anda juga dapat memanggil metode instans pada objek yang sama. Hal ini seringkali menghemat langkah pembuatan variabel sementara dan memungkinkan Anda menulis kode yang lebih fleksibel.
+
+// Pertimbangkan kode berikut:
+
+// var paint = Paint()
+//   ..color = Colors.black
+//   ..strokeCap = StrokeCap.round
+//   ..strokeWidth = 5.0;
+
+// jadi kita bsia mendefinisikan variable, tanpa ;
+// jadi banyak variable dengan satu var saja, dan nanti ;, nya diakhir
+
+// dan jika mungkin bernilai null, maka bisa seperti ini
+
+// var paint = Paint()
+//   ?..color = Colors.black
+//   ?..strokeCap = StrokeCap.round
+//   ..strokeWidth = 5.0;
+
+
+
 // jadi di bin ini adalah directory sebagai tempat untuk menyimpan file file aplikasi
 // untuk menjalankan file dart, itu kita menggunakan
 // dart run bin/nama_file.dart -> jika tidak didalam bin
