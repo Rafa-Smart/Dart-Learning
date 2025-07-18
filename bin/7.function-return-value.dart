@@ -29,7 +29,11 @@ void main() {
   String test(String nama) => 'haloo $nama';
 
   final hasil4 = (String nama) => {
-    'haloo $nama'
+      'haloo $nama'
+  };
+
+  final hasil5 = (String nama) {
+    return 'haloo $nama';
   };
 
 }
