@@ -34,6 +34,7 @@ void sayHello({String? nama, int? umur}) {
   print('haloo $nama, umur $umur');
 };
 sayHello(); // haloo null, umur null -> bisa
+
 // sayHello("jamal",15); ga bisa, jadi harus pake naa paramnya
 sayHello(nama: "jamal", umur: 17); // ini bisa
 
@@ -45,6 +46,42 @@ void sayHello2(String? nama, [int? umur]){
 // sayHello2(); ga bisa
 sayHello2("jamal"); //  bisa -> haloo jamal umur mu null
 sayHello2("jamal", 25); // bisa -> haloo jamal umur mu 25.0
+
+
+
+// 5. default param, harus pake named function
+// jadi karena defaultnnya named function itu adaalh nullable, maka kita bisa
+// jadikannya agar tidak nullable menggunakan default param
+void sayHello4({String nama = "jamal", int? umur}){
+  print('haloo $nama umur ${umur?.toDouble()}');
+}
+sayHello4(); // ini bisa karena, yg awal itu dia default
+// dan yan gkedua itu dia boleh null, atau ga diisi
+
+// nah kalo ga pake kurung kurawal, kalo kita pake param yg pake ?
+// maka dia pas dipanggil, dan jika param yg pake ? ini tidak diisi
+// maka akan eror
+
+// /tapi klo kita pake {int? umur}, maka ketika ktia panggil
+// fungsinya, dan tidak memasukan param umur, maka tidak akan error
+
+// 6. ketika di named param, kita mau required.
+// maka kita bisa pake required
+
+void sayHello7({required String nama, int? umur}){
+  print('halo $nama umur $umur');
+}
+
+// sayHello7(); error, karen nama itu wajib
+
+sayHello(nama: "jamal");
+sayHello(nama: "jamal", umur: 89);
+
+
+
+
+
+
 
 print('----------');
 
