@@ -8,7 +8,7 @@ void main() {
   // nah jadi yg param yg bsia nullable ini wajib diisi, tapi boleh diisi
   // dengna null
 
-  // tapi kalo yg opsional, itu boelh diisi, dan defaultnya juga
+  // tapi kalo yg opsional, itu boelh tidak diisi, dan defaultnya juga
   // dia aalah nullable juga
   // dan kalo ga mau nullable, maka bisa gunakan default parameter pake =
 
@@ -86,7 +86,7 @@ sayHello(nama: "jamal", umur: 89);
 print('----------');
 
 
-  // Fungsi tanpa kembalian (void)
+  // Fungsi tanpa kembalian (void) 
   void sapa(String nama) {
     print('Halo, $nama!');
   }
