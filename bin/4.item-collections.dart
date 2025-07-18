@@ -30,6 +30,7 @@ void main() {
   // dan begitu seterusnya
 
   // contoh 2
+  // namanya adalah  type pattern with named fields.
   var word = 'hello';
   var items3 = [
     1,
@@ -44,6 +45,27 @@ void main() {
   // lalu return wordLength nya yaitu 3
   // ini penjelasannya
   // https://chatgpt.com/c/6878ed9f-648c-8009-8a6e-874baf22b80c
+
+// jadi gini lengkapnya
+//   class Person {
+//   final String name;
+//   final int age;
+//   const Person({required this.name, required this.age});
+// }
+// Untuk bisa digunakan dalam pattern matching, field harus:
+// 1. final
+// 2. Dideklarasikan di konstruktor
+// 3. Tidak disembunyikan (harus dapat diakses langsung)
+
+// 2. Gunakan type pattern with named fields:
+// var person = Person(name: 'Rafa', age: 21);
+
+// if (person case Person(name: var n, age: var a)) {
+//   print('Nama: $n, Umur: $a');
+// }
+// Output: Nama: Rafa, Umur: 21
+
+
 
   // contoh lagi
   var orderDetails = ['Apples', 12, ''];
