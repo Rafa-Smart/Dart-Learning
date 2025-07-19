@@ -9,4 +9,8 @@ declare global {
     isPalindrom(): boolean;
 
   }
+  interface Array{
+    // disini kita buat filternya
+    myFilter(fungsi: (index:number, value: number, array:Array<number>) => boolean): Array<number>;
+  }
 }

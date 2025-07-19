@@ -24,11 +24,6 @@
     };
     // nah sekarang kita coba
     const data2 = "jamal";
-    console.log(data2.isPalindrom()); // false
-
-    // coba yg beneran palindrom / bisa dibalik
-
-    const data3 = "kasur rusak";
-    console.log(data3.isPalindrom()) // true
+    console.log(data2.isPalindrom());
 }
 export {};

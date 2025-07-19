@@ -28,6 +28,9 @@ class Person {
   // Redirecting constructor tidak memiliki body, jadi tidak bisa 
   //mengatur field secara langsung.
 
+  // jadi ini tuh gini, si Person.It ini kayak buat constructor baru
+  // padahal dia melanjutkan ke construcctor utamanya
+
   Person.It(String kerja):this("rafa", 16, kerja);
 
   // ini yag redirec 2
