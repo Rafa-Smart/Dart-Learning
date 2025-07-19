@@ -9,10 +9,29 @@
 // TAPI tidak bisa menyimpan state tambahan (field/properti).
 
   extension NambahPalindrom on String {
+    // nama extension ini bebas
     bool isPalindrom(){
       return this.replaceAll(" ", "") == this.replaceAll(" ", "").split("").reversed.join("");
     }
   }
+
+  // kita juga bisa buat extension tanpa nama
+  // tapi hanya bisa diakses di file ini saja
+  // jadi kalo di file lain, maka ga akan ada extensionya
+
+  // karena defaultnya, klo pake nama maka
+  // Extension hanya terlihat di file atau package yang mengimpornya
+
+  extension on String{
+    bool isPalindrom2(){
+      // return this.replaceAll(" ", "") == this.replaceAll(" ", "").split("").reversed.join("");
+
+      // sebenarnya ga harus pake this, jadi bisa gini
+      return replaceAll(" ", "") == replaceAll(" ", "").split("").reversed.join("");
+    }
+  }
+
+
 
 void main(){
   // jai ktia bisa daftarkan lagi method kesebuah class
@@ -35,7 +54,8 @@ void main(){
   
 
 
-  
+  const palin2 = "dsdsds";
+  print(palin2.isPalindrom2()); // false
 
 
 

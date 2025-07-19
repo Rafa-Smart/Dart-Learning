@@ -90,6 +90,7 @@ void main() {
   jamal.sayHi2!();
   jamal.sayHi3();
   print(Test); // Test
+  const j = 'ssss';
 
   print("--------");
   // jadi kesimpulannya, kao di dart, itu seluruh fungsi akan ditaruh di
