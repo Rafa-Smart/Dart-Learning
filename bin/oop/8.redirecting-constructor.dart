@@ -17,6 +17,8 @@ class Person {
     this.umur = umur;
   }
 
+  // jadi maksudnya itu kita teruskan
+  // constructor named ke constrctor utama
 
   // ini yang redirec 1
   // nah itu bisa pake nama default
@@ -61,6 +63,7 @@ class Orang {
   }
 
   Orang.siswa(this.nama, this.umur, this.kelas);
+
 
   @override
   String toString(){

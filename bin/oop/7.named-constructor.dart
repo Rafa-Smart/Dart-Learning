@@ -109,8 +109,8 @@ class Buku {
 
   // Named constructor dari Map
   Buku.fromMap(Map<String, String> map)
-    : judul = map['judul'] ?? 'Tanpa Judul',
-      penulis = map['penulis'] ?? 'Anonim';
+    : this.judul = map['judul'] ?? 'Tanpa Judul',
+      this.penulis = map['penulis'] ?? 'Anonim';
 }
 
 // ======================================================================
@@ -124,6 +124,7 @@ class Angka {
   Angka(this.nilai);
 
   // Named constructor khusus untuk nol
+  // jadi kalo zero, maka nilainya akan kita jadi kan 0
   Angka.zero() : nilai = 0;
 
   // Named constructor dari string
