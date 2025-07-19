@@ -114,9 +114,6 @@ void main() {
     angka.forEach((e) => print('Angka: $e'));
   }
 
-  // ============================================================================
-  // CONTOH PENGGUNAAN SEMUA DALAM MAIN()
-  // ============================================================================
 
   void main() {
     // Mengirim fungsi sebagai parameter

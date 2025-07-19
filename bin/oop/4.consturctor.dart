@@ -1,4 +1,4 @@
-
+// https://chatgpt.com/c/687b4b06-ae20-8009-9ec9-19563f000b20
 class Mahasiswa {
   // membuat filed dulu, dan ini wajib
   int? umur;
@@ -243,6 +243,4 @@ class Database {
 // - Penggunaan constructor membantu menjaga objek tetap valid
 //   dan memperjelas cara penggunaannya.
 
-// ============================================
-// END FILE
-// ============================================
+
