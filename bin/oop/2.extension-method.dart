@@ -1,4 +1,18 @@
+  // oke disini saya akn menambahkan fungsi palindrom ke dalam class string
+  // agar bisa diakses di objk instancenya
+  // jadi hanya bisa di top level ya
 
+// Dart hanya mengizinkan kita menambahkan:
+// 1.Method (fungsi)
+// 2.Getter
+// 3.Setter
+// TAPI tidak bisa menyimpan state tambahan (field/properti).
+
+  extension NambahPalindrom on String {
+    bool isPalindrom(){
+      return this.replaceAll(" ", "") == this.replaceAll(" ", "").split("").reversed.join("");
+    }
+  }
 
 void main(){
   // jai ktia bisa daftarkan lagi method kesebuah class
@@ -11,7 +25,14 @@ void main(){
   // aktif di scope tersebut untuk String, jadi saat kamu tulis 'John'.sayHi(), Dart 
   // otomatis melakukan redirect ke extension-nya.
 
-  // ini penjelasannya
+
+  // nah disnii ktia tes
+  const data = "jamal";
+  print(data.isPalindrom()); // false
+
+  const datapalindrom = "kasur rusak";
+  print(datapalindrom.isPalindrom()); // true
+  
 
 
   

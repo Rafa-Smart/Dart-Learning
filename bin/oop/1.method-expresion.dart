@@ -1,6 +1,6 @@
 class Test {
   // https://chatgpt.com/c/687b027c-7888-8009-9bb6-bced7391b62d
-  void method1() {
+  void method1() { // ini akan masuk ke prototype
     print('ini method 1');
     print(this);
   }
@@ -72,7 +72,7 @@ class Test {
 
     // ini baru implemetasi
 
-    sayHi2 = () {
+    sayHi2 = () { // ini akan masuk ke obj instance
       print(this);
       print('halooo ini sayHi2');
     };
@@ -89,6 +89,7 @@ void main() {
   jamal.method3();
   jamal.sayHi2!();
   jamal.sayHi3();
+  print(Test); // Test
 
   print("--------");
   // jadi kesimpulannya, kao di dart, itu seluruh fungsi akan ditaruh di
@@ -178,8 +179,21 @@ class Example3 {
 // ===================================
 class Example4 {
   String _name = 'default';
+  int _umur = 15;
 
   String get name => _name; // getter
+
+  // nah jadi fitur itu yg diatas ini, sudah ditinggalkan
+  // jadi lebihbaik gausah pake get / set
+  // karena tinggal obj_instance.nama_fieldnya -> klo get
+
+  // tapi kalo pas get itu mau ada proses eperti print, dll, maka harus pake get
+  // ini contohnya
+  String get umur {
+    print('umur dipanggil');
+    return "umur: ${this._umur}";
+    // ini juga sebenarnya gausah pake this
+  }
 
   set name(String newName) => _name = newName; // setter
 }
