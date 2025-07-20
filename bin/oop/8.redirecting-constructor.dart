@@ -56,6 +56,13 @@ class Orang {
   // jadi buat orang biasa
   Orang(this.nama, this.umur);
 
+  // ini gabisa yaa
+  // nnati errornya itu, karena reirecting itu gapunya body
+  // Orang.karyawan(nama, umur, kerja):this(){
+  //   this.nama = nama;
+  //   this.umur = umur;
+  //   this.kerja = kerja;
+  // }
   Orang.karyawan(nama, umur, kerja){
     this.nama = nama;
     this.umur = umur;

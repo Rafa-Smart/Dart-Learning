@@ -65,7 +65,7 @@ void main() {
 
   print(point2 == color2); // Prints 'false'. Lint: Equals on unrelated types
 
-  // ini aga rumit dikit nih
+
   String? presentKey = 'Apple';
   String? absentKey = null;
 

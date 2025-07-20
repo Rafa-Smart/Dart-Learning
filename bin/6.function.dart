@@ -40,7 +40,7 @@ sayHello(nama: "jamal", umur: 17); // ini bisa
 
 
 // 4. opsioal parameter
-void sayHello2(String? nama, [int? umur]){
+void sayHello2(String? nama, [int? umur=9]){
   print('haloo $nama umur mu ${umur?.toDouble()}');
 }
 // sayHello2(); ga bisa

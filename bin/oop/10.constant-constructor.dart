@@ -1,3 +1,25 @@
+
+
+// const constructor memungkinkan objek dibuat saat compile-time, dan sangat cocok untuk data tetap yang tidak berubah.
+// Supaya objek benar-benar immutable dan dibagikan di memori, variabel yang menampung harus juga const, bukan hanya final atau var.
+// identical() akan true hanya jika:
+// Constructor adalah const
+// Dan objek dibuat menggunakan const juga
+// final, var, late final tetap membuat salinan baru dari objek meskipun constructor-nya const.
+
+
+// /jadi gini simplenya, const constructor itu, berguna kteika kita ingin hemat memory
+// karena kalo kita buat 2 objek instance, dengan param constructor yang sma
+// maka dart akan menyimpannya dalam memory yang sama, jadi efesien
+
+// dan juga kita jadi bisa menampung objeknya menggunakan variableyang constan
+// kan bisanya klo ga pake const constructor, maka kita ga bisa pake ocnst
+// hanya bisa pake var, final, dll
+
+
+
+
+
 void main() {
     // Membuat objek dengan const
     const k1 = Koordinat(10, 20);
@@ -7,7 +29,7 @@ void main() {
     print(identical(k1, k2)); // output: true
 }
 
-
+// https://chatgpt.com/c/687ba3d0-9db8-8009-8a53-467a6677f3ec
 // Apa itu Const Constructor?
 // Const Constructor adalah jenis constructor di Dart yang dapat digunakan
 // untuk membuat **instance objek yang bersifat konstan (immutable / tidak bisa diubah)**,
