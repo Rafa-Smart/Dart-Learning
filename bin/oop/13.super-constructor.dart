@@ -1,13 +1,74 @@
+import 'dart:typed_data';
 
+class Parent {
+  // disini kalo udah pake final
+  // nanti ga bsia diganti lagi
+  String nama = "parent";
+  late int umur;
 
+  // nah disni kita buat constructronya
 
+  Parent(String namaParam, int umurParam) : nama = namaParam, umur = umurParam;
 
-void main(){
+  void sayHi() {
+    print('haloo ini dari parent');
+  }
+}
+
+class Child extends Parent {
+  late bool anak;
+
+  final String nama = 'child';
+
+  // disini kita buat constructor
+  // sekaligus panggil parent constructor pake super
+
+  // nah  jadi pas kita maggil super constructor ke parent
+  // kita harus deklarasikan seluruh propertynya
+  // di Childnya ini
+
+  // nah ini tuh sama aja kayak kita redirecting ke constructor parent
+  // nah biasanya kan kalo kita redirec ke constructor utama dlam class ini
+  // kita ga bsia punya body, nah khusus untuk redirec super, kita bisa melakukannya punya bdy
+  Child(String namaParam, int umurParam, bool isAnak)
+    : anak = isAnak,
+      super(namaParam, umurParam){
+        print('child turunan parent');
+      }
+
+  // INGET
+  // nah ketika gitu, maka otomatis, kita akn punya field
+  // tetep sma seperti di parentnya yaitu nama dan umur
+  // meskipun disini sudah kita ganti jadi namaParam dan umurParam
+
+  // disini kita ingin overide sealigus mengakses
+  // fungsi dari parent yg asli
+
+  @override
+  void sayHi() {
+    print('haloo ini dari child');
+    super.sayHi();
+  }
+
+  void akses() {
+    print('ini dari child -> $nama');
+    print('ini dari parent -> ${super.nama}');
+  }
+}
+
+void main() {
   // jadi ketika kita menggunakn super untuk constructor
   // maka kita harus menaruh super ini di initializer list
   // agar bisa diakes constructor dari parent classnya
+  final Child jamal = Child('jamal', 10, true);
+  print(jamal.nama); // jamal
+  jamal.sayHi();
+  // haloo ini dari child
+  // haloo ini dari parent
 
-
+  jamal.akses();
+  // ini dari child -> child
+  // ini dari parent -> jamal
 }
 
 // super adalah keyword di Dart yang digunakan untuk merujuk ke superclass (kelas induk)
@@ -35,7 +96,7 @@ class Mobil extends Kendaraan {
   @override
   void jalan() {
     print("Mobil mulai menyala");
-    
+
     // Memanggil method jalan() dari superclass Kendaraan
     super.jalan();
   }
