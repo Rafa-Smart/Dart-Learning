@@ -16,11 +16,31 @@
 // kan bisanya klo ga pake const constructor, maka kita ga bisa pake ocnst
 // hanya bisa pake var, final, dll
 
+// dan juga seluruh fieldnya itu wajib menggunakan final
 
+class Person {
+  // late final String name;
+  // late final int umur;
+
+  // gaboleh pake late, dan harus final
+  final String name;
+  final int umur;
+  const Person(this.name, this.umur);
+}
 
 
 
 void main() {
+
+    const Person jamal = Person("jamal", 14);
+    const Person jamal2 = Person("jamal", 14);
+    const hasil = identical(jamal, jamal2);
+    print(hasil); // true
+
+    // var Person siti = Person("siti", 17); -> ga bisa
+
+
+
     // Membuat objek dengan const
     const k1 = Koordinat(10, 20);
     const k2 = Koordinat(10, 20);
