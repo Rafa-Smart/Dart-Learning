@@ -39,7 +39,7 @@ class VicePresident extends Manager {
 
 
 void main() {
-
+// https://chatgpt.com/c/687c7109-cbf4-8009-92b7-da5ccdec3c75
   // atau gini nih, ini adlaah method polimorphism
 
   void sayhello(Employee data){
