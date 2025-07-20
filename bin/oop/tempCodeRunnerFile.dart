@@ -1,7 +1,7 @@
 // jadi kita bisa membaut operator method
 // penjelasan https://chatgpt.com/c/687b1fa4-ed00-8009-a41f-d5d9634b97dd
 // oke disini kita kan buat contoh lain
-
+// https://chatgpt.com/c/687cdd78-09e8-8009-8b0b-3a127ad1a921
 class Pembayaran {
   final int jml_uang;
   final String mata_uang;
