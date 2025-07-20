@@ -6,7 +6,7 @@
     Array.prototype.myFilter = function (filter) {
         let hasil = [];
         for (let i = 0; i < this.length; i++) {
-            if (!filter(i, this[i], this)) {
+            if (filter(i, this[i], this)) {
                 hasil.push(this[i]);
             }
         }

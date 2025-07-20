@@ -1,6 +1,10 @@
 // JADI DI DART, GA BISA ABSTRACT PROPERTY / FIELD
 // https://chatgpt.com/c/687ccde4-39d4-8009-b117-32cc8a059b21
 
+// dan ga bisa di inisiasi objnya
+// hanya bis di turunakn saja
+
+
 // jadi kalo implements itu, sama kayak intreface
 // jadi harus deklarasi ulang semuanya,
 // kalo extends / abstract itu tidak harus di deklarasikan semua
@@ -50,6 +54,9 @@ class User extends Person {
 
   // dan kita disini ga bisa pake super constructor, karena diparetnya itu ga ada
   // constructor
+
+  // nah jadi field yg ada diparentya karena dia belum ada constructor
+  // maka kita baut disini constructornya 
   User(String namaParam, int umurParamm) {
     this.nama = namaParam;
     this.umur = umurParamm;
