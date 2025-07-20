@@ -56,8 +56,96 @@ class UserFactory {
   }
 }
 
+// buat lagi tapi yang sekali buat saja
+
+class Person {
+  Person._internal();
+
+  // jdai disini kita buat dulu constructor named, lalu nanti ketika ada
+  // yang manggil constrctor defuault, maka kita akan mengambilnya dari instance ini
+  // saja, jadi sekali buat untuk banyak objek
+
+  static final Person instance = Person._internal();
+
+  factory Person() {
+    return instance;
+  }
+}
+
+
+// buat lagi
+class User3 {
+  final String username;
+  static final Map<String, User3> _cache =
+      {}; // * Cache untuk menyimpan objek User
+
+  // * Constructor biasa (private) untuk membuat instance baru
+  User3._internal(this.username);
+
+  // * Factory constructor mengontrol logika pembuatan objek
+  factory User3(String username) {
+    // * Jika username sudah ada di cache, kembalikan instance yang sama
+    if (_cache.containsKey(username)) {
+      return _cache[username]!;
+    }
+
+    // * Jika belum ada, buat objek baru dan simpan ke cache
+    final user = User3._internal(username);
+    _cache[username] = user;
+    return user;
+  }
+}
+
+// atua ini contoh lainnya
+// jadi ktia baut database, tapi ketika dibuat, maka itu itu aja objek ang direturnkan
+// jaid hemat memory
+
+class Database {
+  // jaid ini yang default
+  Database(){
+    print('buat database');
+  }
+
+  static Database database = Database();
+
+  // lalu ini yang named dan factory, jadi dia return dirinya sendiri
+  //  Database.get(){
+  //   return database;
+  // }
+
+  // atau kalo kita buat gini
+  // jdi kita redirec
+  // Database.get() : this();
+  // nah kalo gini ketika dipanggil
+  // Database.get();
+  // 2 kali, maka akan ini print('buat database');
+  // akan dieksekusi 2 kali juga, jadi buat baru
+
+  // tapi klo ini engga
+
+  // kalo itu ga bisa, karena contructor itu ga bisa return value
+  // jadi kita harus buat factory
+
+  // static itu variabe global didalam class
+  factory Database.get(){
+    return database;
+  }
+
+}
+
 
 void main() {
+
+
+  final Database data1 = Database.get();
+  final Database data2 = Database.get();
+
+  // nah jadi print('buat database);
+  // ini hanya akn dieksekusi sekali
+  // yaitu ketika di baris ke 109
+  // lalu 
+
+
 
   // Simulasi data JSON dari backend
   Map<String, dynamic> json1 = {
