@@ -27,6 +27,8 @@ class Admin extends User{
 class Guest extends User{
 
   Guest(int idParam, String namaParam)
+    // ini bisa akses id di super ini 
+    // karena id ini sudah di abstraksi, jadi bisa diakses
      : super(id: idParam, nama:namaParam);
   void sayHi() => print('objek guest $nama sudah dibuat');
 }
