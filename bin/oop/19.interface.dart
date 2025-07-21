@@ -1,5 +1,3 @@
-
-
 // jadi karena karena kita ga bisa abstract property / field
 // makanya kita harus pake implements, jaid kita akna mmebaut abstract class
 // atau class biasa menjadi interface, jadi ketika ad class yg implement ke class tersebut
@@ -7,7 +5,40 @@
 
 // dan ini juga bisa multiple interface, jadi tinggal pake koma aja
 
+// ini contoh yang multiple
 
+abstract class Parent1 {
+  void sayHiParent1() {
+    print('haloo dari Parent');
+  }
+
+  void sayHelloParent1();
+}
+
+class Parent2 {
+  void sayHiParent2() {
+    print('haloo ini dari parent 2');
+  }
+}
+
+class User implements Parent1, Parent2 {
+  @override
+  void sayHiParent1() {
+    print('haloo ini dari user');
+  }
+
+  @override
+  void sayHelloParent1() {
+    print('ini dari user juga');
+  }
+
+  @override
+  void sayHiParent2() {
+    print('haloo ini dari parent 2');
+    // print('ini dari parent: ${super.sayHiParent2()}');
+    // ga bisa, jadi ga bsa pake super kalo dari parent yg abstract
+  }
+}
 
 void main() {
   Kendaraan kendaraan1 = Mobil();
@@ -16,7 +47,6 @@ void main() {
   kendaraan1.maju(); // Output: Mobil maju
   kendaraan2.maju(); // Output: Motor jalan ke depan
 }
-
 
 // * Interface dalam Dart adalah sebuah kontrak (perjanjian) yang menyatakan bahwa
 // * sebuah class harus mengimplementasikan semua properti dan method yang didefinisikan oleh interface tersebut.
