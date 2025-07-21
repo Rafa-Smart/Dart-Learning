@@ -1,3 +1,14 @@
+
+
+// jadi karena karena kita ga bisa abstract property / field
+// makanya kita harus pake implements, jaid kita akna mmebaut abstract class
+// atau class biasa menjadi interface, jadi ketika ad class yg implement ke class tersebut
+// maka seluruh proprety  method wajib di deklarasi dan di override ulang
+
+// dan ini juga bisa multiple interface, jadi tinggal pake koma aja
+
+
+
 void main() {
   Kendaraan kendaraan1 = Mobil();
   Kendaraan kendaraan2 = Motor();
