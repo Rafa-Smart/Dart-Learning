@@ -23,6 +23,9 @@ void main() {
   ) {
     List<int> hasil = [];
     for (var i = 0; i < data.length; i++) {
+      // ini di cek , untuk negasi ya, jadi kebalikannya
+
+      // jadi ini tuh di cek, ketika kalo filter ini tidak megembalikan apa apa, maka continue saja
       if (!filter(i, data[i], data)) {
         // jika return false
         // maka lewat

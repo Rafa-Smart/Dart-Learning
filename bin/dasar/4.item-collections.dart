@@ -87,4 +87,27 @@ void main() {
   // karena kondisi ini true, maka return string 'Quantity: $qty'
 
   // dan begitu selanjutnya
+
+  // 🔹 4. Destructuring Object (dengan Class)
+
+// Untuk class, Dart tidak punya destructuring langsung seperti JS {name, age} = obj;.
+// Tapi bisa pakai pattern matching dengan field (Dart 3):
+
+// class Person {
+//   final String name;
+//   final int age;
+//   Person(this.name, this.age);
+// }
+
+// void main() {
+//   var person = Person("Jamal", 25);
+
+//   switch (person) {
+//     case Person(name: var n, age: var a):
+//       print("Name: $n, Age: $a"); // Name: Jamal, Age: 25
+//   }
+// }
+
+
+// 📌 Person(name: var n, age: var a) berfungsi seperti destructuring untuk objek Person.
 }
