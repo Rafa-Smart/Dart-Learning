@@ -455,13 +455,3 @@ void listDemo() {
 // Gunakan operator dengan tepat agar kode tetap mudah dibaca dan tidak membingungkan developer lain.
 
 
-// trsdfs
-// trsdfs
-// trsdfs
-// trsdfs
-// trsdfs
-// trsdfs
-// trsdfs
-// trsdfs
-// trsdfs
-// trsdfs
