@@ -207,3 +207,6 @@ void main2() {
 // dalam menangani berbagai objek secara berbeda tergantung bentuk/jenis nyatanya.
 
 // ============================================================================
+
+
+// asdsa
